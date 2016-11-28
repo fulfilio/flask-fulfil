@@ -11,7 +11,7 @@ from fulfil_client import Client
 from utils import client_url
 
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __author__ = 'Fulfil.Io Inc.'
 __license__ = 'BSD'
 __copyright__ = '(c) 2016 by Fulfil.IO Inc.'
