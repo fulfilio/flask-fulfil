@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 '''
 from fulfil_client import Client
-from utils import client_url, batch, Pagination
+from utils import client_url
 
 
 __version__ = '0.1.1'
