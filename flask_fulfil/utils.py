@@ -8,6 +8,19 @@ from fulfil_client.client import dumps
 
 
 def client_url(model, id=None, domain=None):
+    """
+    A filter for template engine to generate URLs that open
+    on fulfil client of the instance::
+
+        <a href="{{ 'product.product'|client_url }}">Product List</a>
+        <a href="{{ 'product.product'|client_url(product.id) }}">{{ product.name }}</a>
+
+    A more sophisticated example with filter
+
+        <a href="{{ 'product.product'|client_url(domain=[('salable', '=', True)]) }}">
+            Salable Products
+        </a>
+    """
     subdomain = current_app.config['FULFIL_SUBDOMAIN']
     url = 'https://{subdomain}.fulfil.io/client/#/model/{model}'.format(
         subdomain=subdomain,
