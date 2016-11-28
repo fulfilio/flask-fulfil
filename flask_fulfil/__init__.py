@@ -11,8 +11,7 @@ from fulfil_client import Client
 from utils import client_url, batch, Pagination
 
 
-__version_info__ = ('0', '1', '1')
-__version__ = '.'.join(__version_info__)
+__version__ = '0.1.1'
 __author__ = 'Fulfil.Io Inc.'
 __license__ = 'BSD'
 __copyright__ = '(c) 2016 by Fulfil.IO Inc.'

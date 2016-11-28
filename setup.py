@@ -15,7 +15,7 @@ setup(
     author_email='hello@fulfil.io',
     description='Fulfil.IO for Flask Apps',
     long_description=__doc__,
-    py_modules=['flask_fulfil'],
+    packages=['flask_fulfil'],
     zip_safe=False,
     platforms='any',
     install_requires=['Flask', 'fulfil_client'],
