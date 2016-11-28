@@ -4,29 +4,18 @@
     Fulfil.IO for your Flask app
 '''
 
-import os
-
 from setuptools import setup
-
-module_path = os.path.join(os.path.dirname(__file__), 'flask_fulfil.py')
-with open(module_path) as module:
-     for line in module:
-          if line.startswith('__version_info__'):
-               version_line = line
-               break
-
-__version__ = '.'.join(eval(version_line.split('__version_info__ = ')[-1]))
 
 setup(
     name='Flask-Fulfil',
-    version=__version__,
+    version='0.1.2',
     url='https://github.com/fulfilio/flask-fulfil',
     license='BSD',
     author='Fulfil.IO Inc.',
     author_email='hello@fulfil.io',
     description='Fulfil.IO for Flask Apps',
     long_description=__doc__,
-    py_modules=['flask_fulfil'],
+    packages=['flask_fulfil'],
     zip_safe=False,
     platforms='any',
     install_requires=['Flask', 'fulfil_client'],
