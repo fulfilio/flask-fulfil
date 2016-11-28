@@ -8,6 +8,8 @@
     :license: BSD, see LICENSE for more details.
 '''
 from fulfil_client import Client
+from utils import client_url, batch, Pagination
+
 
 __version_info__ = ('0', '1', '0')
 __version__ = '.'.join(__version_info__)
@@ -47,9 +49,12 @@ class Fulfil(object):
             app.config['FULFIL_SUBDOMAIN'],
             app.config['FULFIL_API_KEY'],
         )
+        app.jinja_env.filters['client_url'] = client_url
 
     def model(self, name):
         return self.client.model(name)
 
     def record(self, model_name, record_id):
         return self.client.record(model_name, record_id)
+
+
