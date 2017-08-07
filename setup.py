@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Fulfil',
-    version='0.2.0',
+    version='0.2.1',
     url='https://github.com/fulfilio/flask-fulfil',
     license='BSD',
     author='Fulfil.IO Inc.',
