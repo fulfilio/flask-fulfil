@@ -11,7 +11,7 @@ from fulfil_client import Client, BearerAuth
 from utils import client_url
 
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 __author__ = 'Fulfil.Io Inc.'
 __license__ = 'BSD'
 __copyright__ = '(c) 2016 by Fulfil.IO Inc.'
