@@ -18,7 +18,7 @@ setup(
     packages=['flask_fulfil'],
     zip_safe=False,
     platforms='any',
-    install_requires=['Flask', 'fulfil_client'],
+    install_requires=['Flask', 'fulfil_client>=0.9.0'],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
