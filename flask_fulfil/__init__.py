@@ -7,7 +7,7 @@
     :copyright: (c) 2016 by Fulfil.IO Inc.
     :license: BSD, see LICENSE for more details.
 '''
-from fulfil_client import Client
+from fulfil_client import Client, BearerAuth
 from utils import client_url
 
 
@@ -44,10 +44,17 @@ class Fulfil(object):
         '''Initalizes the application with the extension.
         :param app: The Flask application object.
         '''
-        self.client = Client(
-            app.config['FULFIL_SUBDOMAIN'],
-            app.config['FULFIL_API_KEY'],
-        )
+        offline_access_token = app.config.get('FULFIL_OFFLINE_ACCESS_TOKEN')
+        if offline_access_token:
+            self.client = Client(
+                app.config['FULFIL_SUBDOMAIN'],
+                auth=BearerAuth(offline_access_token)
+            )
+        else:
+            self.client = Client(
+                app.config['FULFIL_SUBDOMAIN'],
+                app.config['FULFIL_API_KEY'],
+            )
         app.jinja_env.filters['client_url'] = client_url
 
     def model(self, name):
@@ -55,5 +62,3 @@ class Fulfil(object):
 
     def record(self, model_name, record_id):
         return self.client.record(model_name, record_id)
-
-
