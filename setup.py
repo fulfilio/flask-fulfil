@@ -1,7 +1,8 @@
 '''
-    Flask-Fulfil
-    ------------
-    Fulfil.IO for your Flask app
+Flask-Fulfil
+============
+
+Fulfil.IO for your Flask app
 '''
 
 from setuptools import setup
