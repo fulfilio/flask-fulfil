@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Fulfil',
-    version='0.2.1',
+    version='0.3.0',
     url='https://github.com/fulfilio/flask-fulfil',
     license='BSD',
     author='Fulfil.IO Inc.',
@@ -18,7 +18,7 @@ setup(
     packages=['flask_fulfil'],
     zip_safe=False,
     platforms='any',
-    install_requires=['Flask', 'fulfil_client>=0.9.0'],
+    install_requires=['Flask', 'fulfil_client>=0.9.0', 'six'],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -29,3 +29,5 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
 )
+
+
