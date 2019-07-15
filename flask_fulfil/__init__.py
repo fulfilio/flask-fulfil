@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 '''
 from fulfil_client import Client, BearerAuth
-from utils import client_url
+from .utils import client_url
 
 
 __version__ = '0.3.0'

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from six.moves.urllib import urlparse, urlencode
+from six.moves.urllib.parse import urlparse, urlencode
 from math import ceil
 
 from flask import current_app
