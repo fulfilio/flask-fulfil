@@ -18,7 +18,7 @@ setup(
     packages=['flask_fulfil'],
     zip_safe=False,
     platforms='any',
-    install_requires=['Flask', 'fulfil_client>=0.9.0'],
+    install_requires=['Flask', 'fulfil_client>=0.9.0', 'six'],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -29,3 +29,5 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
 )
+
+
