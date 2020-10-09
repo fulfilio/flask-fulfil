@@ -48,12 +48,14 @@ class Fulfil(object):
         if offline_access_token:
             self.client = Client(
                 app.config['FULFIL_SUBDOMAIN'],
-                auth=BearerAuth(offline_access_token)
+                auth=BearerAuth(offline_access_token),
+                retry_on_rate_limit=True,
             )
         else:
             self.client = Client(
                 app.config['FULFIL_SUBDOMAIN'],
                 app.config['FULFIL_API_KEY'],
+                retry_on_rate_limit=True,
             )
         app.jinja_env.filters['client_url'] = client_url
 
