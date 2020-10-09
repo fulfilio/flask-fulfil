@@ -1,14 +1,15 @@
 '''
-    Flask-Fulfil
-    ------------
-    Fulfil.IO for your Flask app
+Flask-Fulfil
+============
+
+Fulfil.IO for your Flask app
 '''
 
 from setuptools import setup
 
 setup(
     name='Flask-Fulfil',
-    version='0.3.0',
+    version='0.3.2',
     url='https://github.com/fulfilio/flask-fulfil',
     license='BSD',
     author='Fulfil.IO Inc.',

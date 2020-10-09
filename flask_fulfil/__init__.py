@@ -8,10 +8,10 @@
     :license: BSD, see LICENSE for more details.
 '''
 from fulfil_client import Client, BearerAuth
-from utils import client_url
+from .utils import client_url
 
 
-__version__ = '0.3.0'
+__version__ = '0.3.2'
 __author__ = 'Fulfil.Io Inc.'
 __license__ = 'BSD'
 __copyright__ = '(c) 2016 by Fulfil.IO Inc.'
@@ -48,12 +48,14 @@ class Fulfil(object):
         if offline_access_token:
             self.client = Client(
                 app.config['FULFIL_SUBDOMAIN'],
-                auth=BearerAuth(offline_access_token)
+                auth=BearerAuth(offline_access_token),
+                retry_on_rate_limit=True,
             )
         else:
             self.client = Client(
                 app.config['FULFIL_SUBDOMAIN'],
                 app.config['FULFIL_API_KEY'],
+                retry_on_rate_limit=True,
             )
         app.jinja_env.filters['client_url'] = client_url
 
